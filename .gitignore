@@ -1,0 +1,33 @@
+# .NET
+bin/
+obj/
+
+# Visual Studio Code
+.vscode/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Auto-generated files
+*.log
+*.tlog
+*.ide
+*.ilk
+*.ipch
+*.pdb
+*.obj
+*.pch
+*.idb
+*.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.opendb
+*.VC.db-shm
+*.VC.db-wal
+*.VC.VC.db-shm
+*.VC.VC.db-wal
+*.VC.VC.db

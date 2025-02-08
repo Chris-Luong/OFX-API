@@ -1,0 +1,6 @@
+@OFXApi_HostAddress = http://localhost:5014
+
+GET {{OFXApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
