@@ -28,9 +28,9 @@ public class TransferService : ITransferService
         if (request.Recipient == null ||
             string.IsNullOrWhiteSpace(request.Recipient.Name) ||
             string.IsNullOrWhiteSpace(request.Recipient.AccountNumber) ||
-            Int32.TryParse(request.Recipient.AccountNumber, out _) ||
+            !Int32.TryParse(request.Recipient.AccountNumber, out _) ||
             string.IsNullOrWhiteSpace(request.Recipient.BankCode) ||
-            Int32.TryParse(request.Recipient.BankCode, out _) ||
+            !Int32.TryParse(request.Recipient.BankCode, out _) ||
             string.IsNullOrWhiteSpace(request.Recipient.BankName))
         {
             throw new ArgumentException("Invalid recipient details.");

@@ -3,20 +3,20 @@ using System.Collections.Concurrent;
 namespace OFXApi.Services.ExchangeRateService;
 public class ExchangeRateService : IExchangeRateService
 {
-    private readonly TimeSpan CacheDuration = TimeSpan.FromMinutes(1);
+    private readonly TimeSpan CacheDuration = TimeSpan.FromMinutes(5);
     private readonly ConcurrentDictionary<string, (decimal rate, DateTime expiry)> _cache = new();
 
-    // Simulated exchange rates for allowed currency pairs.
+    // OFX exchange rates for allowed currency pairs.
     private readonly Dictionary<string, decimal> _baseRates = new(StringComparer.OrdinalIgnoreCase)
     {
-        { "AUD-USD", 0.768333m },
-        { "AUD-INR", 55.0m },
-        { "AUD-PHP", 36.5m },
-        { "USD-INR", 72.0m },
-        { "USD-PHP", 50.0m },
-        { "EUR-USD", 1.1m },
-        { "EUR-INR", 80.0m },
-        { "EUR-PHP", 60.0m }
+        { "AUD-USD", 0.6162m },
+        { "AUD-INR", 52.8198m },
+        { "AUD-PHP", 35.102m },
+        { "USD-INR", 84.3258m },
+        { "USD-PHP", 56.0393m },
+        { "EUR-USD", 1.0148m },
+        { "EUR-INR", 86.977m },
+        { "EUR-PHP", 57.7993m }
     };
 
     public Task<decimal> GetExchangeRateAsync(string sellCurrency, string buyCurrency)

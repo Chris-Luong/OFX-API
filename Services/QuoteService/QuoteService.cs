@@ -8,8 +8,8 @@ namespace OFXApi.Services.QuoteService;
 public class QuoteService : IQuoteService
 {
     // Supported currencies (can be adjusted or externalized)
-    private static readonly HashSet<string> SupportedSellCurrencies = new() { "AUD", "USD", "EUR" };
-    private static readonly HashSet<string> SupportedBuyCurrencies = new() { "USD", "INR", "PHP" };
+    private static readonly HashSet<string> SupportedSellCurrencies = ["AUD", "USD", "EUR"];
+    private static readonly HashSet<string> SupportedBuyCurrencies = ["USD", "INR", "PHP"];
 
     private readonly IExchangeRateService _exchangeRateService;
 
