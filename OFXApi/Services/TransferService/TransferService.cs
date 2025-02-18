@@ -28,9 +28,9 @@ public class TransferService : ITransferService
         if (request.Recipient == null ||
             string.IsNullOrWhiteSpace(request.Recipient.Name) ||
             string.IsNullOrWhiteSpace(request.Recipient.AccountNumber) ||
-            !Int32.TryParse(request.Recipient.AccountNumber, out _) ||
+            !int.TryParse(request.Recipient.AccountNumber, out _) ||
             string.IsNullOrWhiteSpace(request.Recipient.BankCode) ||
-            !Int32.TryParse(request.Recipient.BankCode, out _) ||
+            !int.TryParse(request.Recipient.BankCode, out _) ||
             string.IsNullOrWhiteSpace(request.Recipient.BankName))
         {
             throw new ArgumentException("Invalid recipient details.");
@@ -55,8 +55,8 @@ public class TransferService : ITransferService
             Recipient = new Recipient
             {
                 Name = request.Recipient.Name,
-                AccountNumber = Int32.Parse(request.Recipient.AccountNumber),
-                BankCode = Int32.Parse(request.Recipient.BankCode),
+                AccountNumber = int.Parse(request.Recipient.AccountNumber),
+                BankCode = int.Parse(request.Recipient.BankCode),
                 BankName = request.Recipient.BankName
             },
             EstimatedDeliveryDate = DateTime.UtcNow.AddDays(1)
