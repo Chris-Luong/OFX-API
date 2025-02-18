@@ -9,6 +9,7 @@ The technical implementation should be doable in under 2 hours.
 
 - Platform: .NET 8 or later
 - Language: C#
+- Testing: xUnit and Moq libraries were used
 - API Type: REST
 
 ## Currency Support
