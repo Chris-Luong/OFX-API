@@ -5,7 +5,7 @@ using OFXApi.Services.QuoteService;
 namespace OFXApi.Controllers;
 
 [ApiController]
-[Route("transfers/quote")]
+[Route("quote")]
 [Produces("application/json")]
 
 public class QuoteController: ControllerBase
